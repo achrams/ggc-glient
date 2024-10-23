@@ -1,0 +1,18 @@
+{
+  "files": [],
+  "compilerOptions": {
+      "types": [
+        "vue3-toastify/global"
+      ],
+      "typeRoots": ["./node_modules/@types", "./types"],
+      "moduleResolution": "node"
+    },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}
