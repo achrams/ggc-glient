@@ -9,8 +9,8 @@ window.scrollTo(0,0)
 </script>
 
 <template>
+  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full min-h-screen">
-    <meta name="google-adsense-account" content="ca-pub-9693141473366441">
     <!-- Background -->
     <!-- Content -->
     <div class="w-full mt-40 md:mt-20 flex flex-col items-center">

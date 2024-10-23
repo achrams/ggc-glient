@@ -25,15 +25,24 @@ const purchase = () => {
   router.push('/donasi/form?type=' + data_list[current.value].type)
 }
 
-window.scrollTo(0,0)
+const formatMoney = (amount: number) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0
+  }).format(amount)
+}
+
+window.scrollTo(0, 0)
 
 </script>
 <template>
+  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full h-screen">
-    <meta name="google-adsense-account" content="ca-pub-9693141473366441">
     <div class="md:container mx-auto md:p-4 my-4 md:my-8 lg:my-12">
       <div class="w-full h-full mt-20 flex flex-col items-center">
-        <h1 class="px-1 md:px-0 text-xl md:text-4xl lg:text-5xl font-extrabold text-center text-[#39BEFF] mt-12 md:mt-24">
+        <h1
+          class="px-1 md:px-0 text-xl md:text-4xl lg:text-5xl font-extrabold text-center text-[#39BEFF] mt-12 md:mt-24">
           GUKGUKCRAFT DONATION LIST</h1>
         <div class="flex justify-center items-center mt-12 md:mt-24 w-full md:w-3/4">
           <div class="w-1/12 text-center hidden md:flex justify-center">
@@ -47,11 +56,15 @@ window.scrollTo(0,0)
               <div v-if="current == i"
                 class="absolute bg-black/[.8] z-20 w-full h-full fade-in duration-700 delay-300 text-center flex flex-col justify-center items-center rounded-lg">
                 <h5 :class="{
-                  'text-red-600 text-2xl md:text-4xl lg:text-5xl my-6': slide.title == '[LORD]',
-                  'text-orange-500 text-2xl md:text-4xl lg:text-5xl my-6': slide.title == '[VVIP]',
-                  'text-yellow-500 text-2xl md:text-4xl lg:text-5xl my-6': slide.title == '[VIP]',
+                  'text-red-600 text-2xl md:text-4xl lg:text-4xl xl:text-5xl my-4': slide.title == '[LORD]',
+                  'text-orange-500 text-2xl md:text-4xl lg:text-4xl xl:text-5xl my-4': slide.title == '[VVIP]',
+                  'text-yellow-500 text-2xl md:text-4xl lg:text-4xl xl:text-5xl my-4': slide.title == '[VIP]',
                 }">{{ slide.title }}</h5>
-                <h5 v-for="(benefit, j) in slide.benefits" :key="j" class="text-white text-center">{{ benefit }}</h5>
+                <h5 v-for="(benefit, j) in slide.benefits" :key="j" class="text-white text-center text-md md:text-sm lg:text-md xl:text-lg">{{ benefit }}</h5>
+                <div class="w-1/4 md:w-1/6 text-left mt-2">
+                  <h5 class="text-sm md:text-sm lg:text-sm xl:text-md text-white line-through">{{ formatMoney(slide.price * 120 / 100) }}</h5>
+                </div>
+                <h5 class="text-md md:text-lg lg:text-xl xl:text-2xl text-yellow-400">{{ formatMoney(slide.price) }}</h5>
               </div>
               <img v-if="current == i" class="rounded-lg duration-700 delay-100 fade-in min-h-[350px] w-full"
                 :src="slide.img" :alt="slide.title" :id="'donasi-' + i" />

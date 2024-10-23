@@ -1,6 +1,6 @@
 <template>
+  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full mt-12 md:mt-32 mb-40 flex flex-col items-center">
-    <meta name="google-adsense-account" content="ca-pub-9693141473366441">
     <div class="w-full mt-12 px-2 flex items-center justify-center">
       <h2 class=" px-4 text-md md:text-xl lg:text-2xl font-bold text-white uppercase text-center">Payment Form</h2>
     </div>
@@ -171,7 +171,7 @@ export default defineComponent({
           type: this.type
         }
 
-        axios.post('http://localhost:4000/payment', {
+        axios.post('https://api.gukgukcraft.id/payment', {
           parameter
         })
         .then(res => {
