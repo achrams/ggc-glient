@@ -3,6 +3,7 @@ import iziToast from 'izitoast'
 import { ref } from 'vue'
 import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
 import axios from 'axios'
+import { useHead } from '@vueuse/head';
 
 const accordions = ref([false, false, false, false])
 const username = ref('')
@@ -13,6 +14,16 @@ const errors = ref({
   username: '',
   discord: '',
   message: ''
+})
+
+useHead({
+  title: 'Contact',
+  meta:[
+    {
+      name:"google-adsense-account",
+      content:"ca-pub-9693141473366441"
+    }
+  ]
 })
 
 const toggleAccordion = (index: number) => {
@@ -84,7 +95,6 @@ window.scrollTo(0,0)
 </script>
 
 <template>
-  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full min-h-screen mt-12 md:mt-32 mb-40 flex flex-col items-center">
     <div class="w-full mt-12 px-2 flex flex-wrap items-center justify-center">
       <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#39BEFF]">FREQUENTLY ASKED</h1>

@@ -1,5 +1,4 @@
 <template>
-  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full min-h-screen mt-12 md:mt-32 mb-40 flex flex-col items-center">
     <div class="w-full mt-12 px-2 flex items-center justify-center">
       <h1 class="text-2xl md:text-4xl lg:text-7xl font-extrabold text-[#39BEFF]">GUKGUKCRAFT</h1>
@@ -48,6 +47,7 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@vueuse/head';
 import Character from '@/components/Character.vue';
 import gukgukgame from '@/assets/img/chars/gukgukgame.png'
 import killerbyte from '@/assets/img/chars/kill3rbyte.png'
@@ -58,6 +58,16 @@ import blackflagbaby from '@/assets/img/chars/mankbim.png'
 import ffirefox from '@/assets/img/chars/firefox.png'
 import icheem from '@/assets/img/chars/icheem.png'
 import titoyxcoo from '@/assets/img/chars/titoy.png'
+
+useHead({
+  title: 'GGC Team',
+  meta:[
+    {
+      name:"google-adsense-account",
+      content:"ca-pub-9693141473366441"
+    }
+  ]
+})
 
 window.scrollTo(0,0)
 </script>

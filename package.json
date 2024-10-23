@@ -11,6 +11,7 @@
     "check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "axios": "^1.7.7",
     "izitoast": "^1.4.0",
     "pinia": "^2.2.4",

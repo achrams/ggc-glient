@@ -1,10 +1,21 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head';
 import { data_list, type Item } from '../data'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter()
 const current = ref(0)
 const direction = ref('')
+
+useHead({
+  title: 'Donasi',
+  meta:[
+    {
+      name:"google-adsense-account",
+      content:"ca-pub-9693141473366441"
+    }
+  ]
+})
 
 const changeType = (val: string) => {
   if (val === 'prev') {
@@ -37,7 +48,6 @@ window.scrollTo(0, 0)
 
 </script>
 <template>
-  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full h-screen">
     <div class="md:container mx-auto md:p-4 my-4 md:my-8 lg:my-12">
       <div class="w-full h-full mt-20 flex flex-col items-center">

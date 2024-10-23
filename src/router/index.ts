@@ -6,9 +6,6 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      meta: {
-        title: 'GukGukCraft'
-      },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -17,9 +14,6 @@ const router = createRouter({
     {
       path: '/donasi',
       name: 'donasi',
-      meta: {
-        title: 'Donation'
-      },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -28,9 +22,6 @@ const router = createRouter({
     {
       path: '/donasi/form',
       name: 'payment',
-      meta: {
-        title: 'Payment Form'
-      },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -39,9 +30,6 @@ const router = createRouter({
     {
       path: '/team',
       name: 'team',
-      meta: {
-        title: 'GGC Team'
-      },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -50,9 +38,6 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      meta: {
-        title: 'Contact'
-      },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

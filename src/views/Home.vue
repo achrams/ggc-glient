@@ -1,18 +1,26 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import AboutUs from '@/components/AboutUs.vue';
 import JoinDiscord from '@/components/JoinDiscord.vue';
 import Opening from '@/components/Opening.vue';
 import ServerStatus from '@/components/ServerStatus.vue';
 import Vote from '@/components/Vote.vue'
 
+useHead({
+  title: 'GukGukCraft',
+  meta:[
+    {
+      name:"google-adsense-account",
+      content:"ca-pub-9693141473366441"
+    }
+  ]
+})
+
 window.scrollTo(0,0)
 </script>
 
 <template>
-  <meta name="google-adsense-account" content="ca-pub-9693141473366441">
   <div class="relative w-full min-h-screen">
-    <!-- Background -->
-    <!-- Content -->
     <div class="w-full mt-40 md:mt-20 flex flex-col items-center">
       <div class="container mx-auto p-4 my-4 md:my-8 lg:my-40">
         <div class="flex flex-col items-center">
